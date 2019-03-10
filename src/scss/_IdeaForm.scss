@@ -1,0 +1,19 @@
+.idea-form {
+    background-color: $medium-background;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.idea-inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    text-align: left;
+}
+
+.save-idea-button {
+    margin: 10px 0px 0px 0px;
+}
