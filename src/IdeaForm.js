@@ -11,7 +11,6 @@ export default class IdeaForm extends Component {
 
     updateIdeaTitle = (e) => {
         e.preventDefault();
-        console.log(e.target.value)
         this.setState({
             ideaTitle: (e.target.value)
         })
@@ -19,7 +18,6 @@ export default class IdeaForm extends Component {
 
     updateIdeaBody = (e) => {
         e.preventDefault();
-        console.log(e.target.value)
         this.setState({
             ideaBodyText: (e.target.value)
         })
@@ -33,7 +31,9 @@ export default class IdeaForm extends Component {
         return (
             <section className="idea-form">
                 <form className="idea-inputs" method="get">
-                    <label htmlFor="form-idea-title">Title</label>
+                    <label 
+                        htmlFor="form-idea-title">Title
+                    </label>
                     <input 
                         className="user-idea-inputs user-idea-title" 
                         type="text" 
@@ -41,7 +41,9 @@ export default class IdeaForm extends Component {
                         onChange={this.updateIdeaTitle}
                         id="form-idea-title">
                     </input>
-                    <label htmlFor="form-idea-body">Body</label>
+                    <label 
+                        htmlFor="form-idea-body">Body
+                    </label>
                     <textarea 
                         className="user-idea-inputs user-idea-body" 
                         type="text" 
@@ -52,7 +54,10 @@ export default class IdeaForm extends Component {
                     <button onClick={this.submitNewIdea} className="save-idea-button">Save</button>
                 </form>
                 {this.props.ideaCards.length > 0 && (
-                    <IdeaCard />
+                    <IdeaCard 
+                        ideaTitle={this.state.ideaTitle}
+                        ideaBodyText={this.state.ideaBodyText}
+                    />
                 )}
             </section>
         )
