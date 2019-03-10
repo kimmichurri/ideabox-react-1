@@ -4,11 +4,17 @@ import Header from './Header';
 import IdeaForm from './IdeaForm';
 
 class App extends Component {
+  constructor() {
+    super();
+      this.state = {
+        ideaCards: []
+      }
+  }
   render() {
     return (
       <div className="App">
       <Header />
-      <IdeaForm />
+      <IdeaForm ideaCards={this.state.ideaCards}/>
       </div>
     );
   }
