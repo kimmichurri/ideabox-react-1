@@ -3,9 +3,9 @@ import Search from './Search';
 
 export default function Header() {
     return (
-        <div>
-            <h1 className='app-name'>IdeaBox<span className='app-name-color-accent'>Triples</span></h1>
+        <section className="header-container">
+            <h1 className='app-name'><span className='app-name-color-accent'>ideabox</span>triples</h1>
             <Search />
-        </div>
+        </section>
     )
 }
