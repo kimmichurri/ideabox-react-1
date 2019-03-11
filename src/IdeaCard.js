@@ -1,10 +1,12 @@
 import React from 'react';
 
-export default function IdeaCard() {
+export default function IdeaCard({ ideaTitle, ideaBodyText, id}) {
 
     return (
         <section>
-            <p>Ideas will collect here!</p>
+            <h3>{ ideaTitle }</h3>
+            <p>{ ideaBodyText }</p>
+            <button>x</button>
         </section>
     )
 }
