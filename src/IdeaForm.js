@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import IdeaCard from './IdeaCard'
 export default class IdeaForm extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             ideaTitle: "",
             ideaBodyText: ""
@@ -23,14 +23,15 @@ export default class IdeaForm extends Component {
         })
     }
 
-    submitNewIdea(e) {
+    handleSubmit = (e) => {
         e.preventDefault();
+        this.props.addIdea(this.state)
     }
 
     render() {
         return (
             <section className="idea-form">
-                <form className="idea-inputs" method="get">
+                <form className="idea-inputs" onSubmit={this.handleSubmit}>
                     <label 
                         htmlFor="form-idea-title">Title
                     </label>
