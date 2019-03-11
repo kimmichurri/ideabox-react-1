@@ -10,11 +10,21 @@ class App extends Component {
         ideaCards: []
       }
   }
+
+  addIdea = (idea) => {
+    const newIdea = {...idea, id: Date.now()}
+    this.setState({
+      ideaCards: [...this.state.ideaCards, newIdea]
+    })
+  }
+
+
   render() {
+    const { ideaCards } = this.state
     return (
       <div className="App">
       <Header />
-      <IdeaForm ideaCards={this.state.ideaCards}/>
+      <IdeaForm ideaCards={ideaCards} addIdea={this.addIdea}/>
       </div>
     );
   }
