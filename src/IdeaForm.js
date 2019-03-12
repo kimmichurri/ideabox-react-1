@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import IdeaCard from './IdeaCard'
 export default class IdeaForm extends Component {
     constructor(props) {
         super(props);
@@ -52,14 +51,14 @@ export default class IdeaForm extends Component {
                         onChange={this.updateIdeaBody}
                         id="form-idea-body">
                     </textarea>
-                    <button onClick={this.submitNewIdea} className="save-idea-button">Save</button>
+                    <button className="save-idea-button">Save</button>
                 </form>
-                {this.props.ideaCards.length > 0 && (
+                {/* {this.props.ideaCards.length > 0 && (
                     <IdeaCard 
                         ideaTitle={this.state.ideaTitle}
                         ideaBodyText={this.state.ideaBodyText}
                     />
-                )}
+                )} */}
             </section>
         )
     }

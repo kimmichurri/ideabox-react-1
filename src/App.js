@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './scss/_App.scss';
 import Header from './Header';
 import IdeaForm from './IdeaForm';
+import IdeaContainer from './IdeaContainer';
 
 class App extends Component {
   constructor() {
@@ -25,6 +26,7 @@ class App extends Component {
       <div className="App">
       <Header />
       <IdeaForm ideaCards={ideaCards} addIdea={this.addIdea}/>
+      <IdeaContainer ideacards={ ideaCards } />
       </div>
     );
   }
