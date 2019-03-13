@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 export default class IdeaForm extends Component {
     constructor(props) {
         super(props);
@@ -53,7 +54,7 @@ export default class IdeaForm extends Component {
                     </textarea>
                     <button className="save-idea-button">Save</button>
                 </form>
-                {/* {this.props.ideaCards.length > 0 && (
+                {/* {this.props.ideas.length > 0 && (
                     <IdeaCard 
                         ideaTitle={this.state.ideaTitle}
                         ideaBodyText={this.state.ideaBodyText}

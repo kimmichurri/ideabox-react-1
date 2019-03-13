@@ -8,25 +8,25 @@ class App extends Component {
   constructor() {
     super();
       this.state = {
-        ideaCards: []
+        ideas: []
       }
   }
 
   addIdea = (idea) => {
     const newIdea = {...idea, id: Date.now()}
     this.setState({
-      ideaCards: [...this.state.ideaCards, newIdea]
+      ideas: [...this.state.ideas, newIdea]
     })
   }
 
 
   render() {
-    const { ideaCards } = this.state
+    const { ideas } = this.state
     return (
       <div className="App">
       <Header />
-      <IdeaForm ideaCards={ideaCards} addIdea={this.addIdea}/>
-      <IdeaContainer ideacards={ ideaCards } />
+      <IdeaForm ideas={ideas} addIdea={this.addIdea}/>
+      <IdeaContainer ideas={ideas} />
       </div>
     );
   }
